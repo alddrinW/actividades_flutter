@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rutas_actividad/routes/app_routes.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter demo con rutas',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
           elevation: 4,
         ),
       ),
-      initialRoute: AppRoutes.home,
-      routes: AppRoutes.getRoutes(),
+      //initialRoute: AppRoutes.home,
+      //routes: AppRoutes.getRoutes(),
+      routerConfig: appRouter,
     );
   }
 }

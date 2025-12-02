@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({super.key});
@@ -33,7 +34,8 @@ class _FormScreenState extends State<FormScreen> {
           SizedBox(height: 20),
           ElevatedButton.icon(
             onPressed: () {
-              Navigator.pop(context, _controller.text);
+              //Navigator.pop(context, _controller.text);
+              context.pop(_controller.text);
             },
             label: Text('Enviar'),
           ),

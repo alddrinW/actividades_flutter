@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 30),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pushNamed(context, 'details');
+                //Navigator.pushNamed(context, 'details');
+                context.go('/details');
               },
               label: Text('Ir a detalles'),
               icon: Icon(Icons.info),
@@ -25,7 +27,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 30),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pushNamed(context, 'settings');
+                //Navigator.pushNamed(context, 'settings');
+                context.go('/settings');
               },
               label: Text('Ir a settings'),
               icon: Icon(Icons.settings),

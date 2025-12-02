@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -18,7 +19,8 @@ class DetailsScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                context.go('/');
               },
               icon: Icon(Icons.arrow_back),
               label: Text('Regresar'),

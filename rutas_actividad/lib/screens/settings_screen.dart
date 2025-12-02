@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rutas_actividad/screens/form_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -43,7 +44,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pop(context);
+                //Navigator.pop(context);
+                context.go('/');
               },
               label: Text('Regresar'),
               icon: Icon(Icons.arrow_back),
